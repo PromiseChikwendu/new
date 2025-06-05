@@ -101,7 +101,8 @@
         }
 
         function renderCart() {
-            if (!window.location.pathname.includes('cart.html')) return;
+            if (!/cart(\.html)?$/.test(window.location.pathname)) return;
+
 
             const tbody = $('table tbody');
             tbody.empty();
