@@ -336,7 +336,8 @@
 
         // Update SubTotal in cart.html to match subtotal logic in checkout.html
         function updateCartSubtotal() {
-            if (!window.location.pathname.includes('cart.html')) return;
+            if (!window.location.pathname.includes('cart')) return;
+
             let subtotal = 0;
             cart.forEach(item => {
                 const price = parseFloat(item.price.replace(/[^0-9.]/g, '')) || 0;
